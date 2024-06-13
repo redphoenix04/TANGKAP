@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 st.set_page_config(layout='wide')
 
 ####### Load Dataset #####################
-GWP = pd.read_csv("C:/Users/andry/Documents/project_adv/data/GWP.csv")
+GWP = pd.read_csv("data/GWP.csv")
 GWP['Periode']= pd.to_datetime(GWP['Periode'])
 GWP['year'] = GWP['Periode'].apply(lambda x: x.year)
 GWP['month'] = GWP['Periode'].apply(lambda x: x.month)
