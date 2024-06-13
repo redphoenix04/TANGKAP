@@ -12,7 +12,7 @@ st.set_page_config(layout='wide')
 # Load the Dataset
 # df = sns.load_dataset('tips')
 #-----------------------------------------------------------------------
-df = pd.read_csv("C:/Users/andry/Documents/project_adv/data/insurance_claims.csv")
+df = pd.read_csv("data/insurance_claims.csv")
 # Title
 st.title('TANGKAP')
 
