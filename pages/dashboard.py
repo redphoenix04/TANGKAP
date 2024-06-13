@@ -128,7 +128,7 @@ st.markdown('---')
 
 st.subheader('| CLAIM PROFILE')
 st.write('##### Sumber Data: https://data.mendeley.com/datasets/992mh7dk9y/2')
-df = pd.read_csv("C:/Users/andry/Documents/project_adv/data/insurance_claims.csv")
+df = pd.read_csv("data/insurance_claims.csv")
 dfa = df.copy()
 dfa['auto_model'] = dfa['auto_model'].map({'92x':'Luxury/Sports','E400':'Luxury/Sports','RAM':'SUV/Truck','Tahoe':'SUV/Truck','RSX':'Luxury/Sports','95':'Midsize SUV/Sedan','Pathfinder':'Midsize SUV/Sedan','A5':'Luxury/Sports','Camry':'Midsize SUV/Sedan','F150':'SUV/Truck','A3':'Luxury/Sports','Highlander':'SUV/Truck','Neon':'Midsize SUV/Sedan','MDX':'Midsize SUV/Sedan', 'Maxima':'Midsize SUV/Sedan','Legacy':'Midsize SUV/Sedan', 'TL':'Midsize SUV/Sedan', 'Impreza':'Midsize SUV/Sedan', 'Forrestor':'Midsize SUV/Sedan', 'Escape':'SUV/Truck', 'Corolla':'Midsize SUV/Sedan','3 Series':'Luxury/Sports', 'C300':'Luxury/Sports', 'Wrangler':'SUV/Truck', 'M5':'Luxury/Sports', 'X5':'Luxury/Sports', 'Civic':'Midsize SUV/Sedan', 'Passat':'Midsize SUV/Sedan','Silverado':'SUV/Truck', 'CRV':'Midsize SUV/Sedan', '93':'Midsize SUV/Sedan', 'Accord':'Midsize SUV/Sedan', 'X6':'Luxury/Sports', 'Malibu':'Midsize SUV/Sedan', 'Fusion':'Luxury/Sports','Jetta':'Midsize SUV/Sedan', 'ML350':'SUV/Truck','Ultima':'Luxury/Sports','Grand Cherokee':'SUV/Truck'})
 dfa['auto_brand'] = dfa['auto_make'].map({'Saab':'High', 'Mercedes':'Luxury','Dodge':'High','Chevrolet':'Medium','Accura':'Luxury','Nissan':'Medium','Audi':'Luxury','Toyota':'Medium','Ford':'High','Suburu':'High','BMW':'Luxury','Jeep':'Luxury','Honda':'Medium','Volkswagen':'Luxury'})
