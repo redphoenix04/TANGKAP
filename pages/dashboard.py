@@ -153,73 +153,73 @@ st.write('### Data Polis: ')
 col41, col42 = st.columns(2)
 with col41:
     data41 = pd.DataFrame(dfa.groupby(['policy_state','fraud_reported']).count().reset_index())
-    b41=px.bar(data41,x="policy_state",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by auto_brand')
+    b41=px.bar(data41,x="policy_state",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by policy_state')
     b41figure=st.plotly_chart(b41, use_container_width=True)
 
 with col42:
     data42 = pd.DataFrame(dfa.groupby(['policy_csl','fraud_reported']).count().reset_index())
-    b42=px.bar(data42,x="policy_csl",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by car_age_g')
+    b42=px.bar(data42,x="policy_csl",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by policy_csl')
     b42figure=st.plotly_chart(b42, use_container_width=True)
 
 col43, col44 = st.columns(2)
 with col43:
     data43 = pd.DataFrame(dfa.groupby(['policy_deductable','fraud_reported']).count().reset_index())
-    b43=px.bar(data43,x="policy_deductable",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by policy_age_g')
+    b43=px.bar(data43,x="policy_deductable",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by policy_deductable')
     b43figure=st.plotly_chart(b43, use_container_width=True)
 
 with col44:
     data44 = pd.DataFrame(dfa.groupby(['policy_age_g','fraud_reported']).count().reset_index())
-    b44=px.bar(data44,x="policy_age_g",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by auto_brand')
+    b44=px.bar(data44,x="policy_age_g",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by policy_age_g')
     b44figure=st.plotly_chart(b44, use_container_width=True)
 st.markdown('---')
 st.write('### Data Tertanggung: ')
 col51, col52, col53 = st.columns(3)
 with col51:
     data51 = pd.DataFrame(dfa.groupby(['insured_sex','fraud_reported']).count().reset_index())
-    b51=px.bar(data51,x="insured_sex",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by auto_brand')
+    b51=px.bar(data51,x="insured_sex",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by insured_sex')
     b51figure=st.plotly_chart(b51, use_container_width=True)
 
 with col52:
     data52 = pd.DataFrame(dfa.groupby(['insured_education_level','fraud_reported']).count().reset_index())
-    b52=px.bar(data52,x="insured_education_level",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by car_age_g')
+    b52=px.bar(data52,x="insured_education_level",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by insured_education_level')
     b52figure=st.plotly_chart(b52, use_container_width=True)
 
 with col53:
     data53 = pd.DataFrame(dfa.groupby(['insured_occupation','fraud_reported']).count().reset_index())
-    b53=px.bar(data53,x="insured_occupation",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by policy_age_g')
+    b53=px.bar(data53,x="insured_occupation",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by insured_occupation')
     b53figure=st.plotly_chart(b53, use_container_width=True)
 
 col54, col55, col56 = st.columns(3)
 with col54:
     data54 = pd.DataFrame(dfa.groupby(['insured_hobbies','fraud_reported']).count().reset_index())
-    b54=px.bar(data54,x="insured_hobbies",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by auto_brand')
+    b54=px.bar(data54,x="insured_hobbies",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by insured_hobbies')
     b54figure=st.plotly_chart(b54, use_container_width=True)
 
 with col55:
-    data55 = pd.DataFrame(dfa.groupby(['car_age_g','fraud_reported']).count().reset_index())
-    b55=px.bar(data55,x="car_age_g",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by car_age_g')
+    data55 = pd.DataFrame(dfa.groupby(['age_g','fraud_reported']).count().reset_index())
+    b55=px.bar(data55,x="age_g",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by age_g')
     b55figure=st.plotly_chart(b55, use_container_width=True)
 
 with col56:
     data56 = pd.DataFrame(dfa.groupby(['insured_relationship','fraud_reported']).count().reset_index())
-    b56=px.bar(data56,x="insured_relationship",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by policy_age_g')
+    b56=px.bar(data56,x="insured_relationship",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by insured_relationship')
     b56figure=st.plotly_chart(b56, use_container_width=True)
 st.markdown('---')
 st.write('### Data Kendaraan: ')
 col61, col62, col63 = st.columns(3)
 with col61:
     data61 = pd.DataFrame(dfa.groupby(['auto_model','fraud_reported']).count().reset_index())
-    b61=px.bar(data61,x="auto_model",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by auto_brand')
+    b61=px.bar(data61,x="auto_model",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by auto_model')
     b61figure=st.plotly_chart(b61, use_container_width=True)
 
 with col62:
     data62 = pd.DataFrame(dfa.groupby(['auto_brand','fraud_reported']).count().reset_index())
-    b62=px.bar(data62,x="auto_brand",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by car_age_g')
+    b62=px.bar(data62,x="auto_brand",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by auto_brand')
     b62figure=st.plotly_chart(b62, use_container_width=True)
 
 with col63:
     data63 = pd.DataFrame(dfa.groupby(['car_age_g','fraud_reported']).count().reset_index())
-    b63=px.bar(data63,x="car_age_g",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by policy_age_g')
+    b63=px.bar(data63,x="car_age_g",y="policy_number",color='fraud_reported',color_discrete_map={'Y':'red','N':'blue'},title='Fraud Report by car_age_g')
     b63figure=st.plotly_chart(b63, use_container_width=True)
 st.markdown('---')
 st.write('### Data Kejadian: ')
